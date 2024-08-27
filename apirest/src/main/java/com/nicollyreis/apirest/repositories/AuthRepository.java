@@ -1,12 +1,11 @@
 package com.nicollyreis.apirest.repositories;
 
-import com.nicollyreis.apirest.dtos.AuthDTO;
-import com.nicollyreis.apirest.models.Usuario;
+import com.nicollyreis.apirest.models.Auth;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
-@Repository
-public interface AuthRepository extends JpaRepository<Auth, Long> {
-    Auth getUsuarioByEmail(String email);
+import java.util.Optional;
+
+public interface AuthRepository extends JpaRepository<Auth,Long> {
+    Optional<Auth> findByEmail(String email);
 
 }

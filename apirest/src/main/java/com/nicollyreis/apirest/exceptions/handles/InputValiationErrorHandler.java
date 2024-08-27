@@ -1,4 +1,4 @@
-package com.nicollyreis.apirest.middleware;
+package com.nicollyreis.apirest.exceptions.handles;
 
 import com.nicollyreis.apirest.dtos.InputErrorsDTO;
 import org.springframework.beans.factory.annotation.Autowired;

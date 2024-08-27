@@ -7,3 +7,8 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/api_rest
     username: root
     password: 654
+
+app:
+  jwt:
+    expiracao: 60
+    chave-assinatura: QXBpUmVzdCBjb20gY3J1ZCBjb21wbGV0byBlIGF1dGVudGljYcOnw6Nv

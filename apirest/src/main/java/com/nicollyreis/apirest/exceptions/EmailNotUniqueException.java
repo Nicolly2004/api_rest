@@ -1,2 +1,7 @@
-package com.nicollyreis.apirest.exceptions.handles;public class EmailNotUniqueException {
+package com.nicollyreis.apirest.exceptions;
+
+public class EmailNotUniqueException extends RuntimeException {
+    public EmailNotUniqueException(){
+        super("O campo email precisa ser único");
+    }
 }

@@ -1,6 +1,6 @@
 package com.nicollyreis.apirest.forms;
 
-
+import com.nicollyreis.apirest.models.Auth;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -9,6 +9,11 @@ import lombok.Data;
 
 @Data
 public class CreateAuthForm {
+
+    @NotNull
+    @Email
+    @NotEmpty
+    private String email;
 
     @NotNull
     @Size(min = 6, max = 20)
@@ -22,6 +27,7 @@ public class CreateAuthForm {
     public Auth convert(){
 
         Auth auth  = new Auth();
+        auth.setEmail(this.getEmail());
         auth.setLogin(this.getLogin());
         auth.setSenha(this.getSenha());
 
@@ -29,3 +35,6 @@ public class CreateAuthForm {
     }
 
 }
+
+
+
